@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"removeComments": true,
+		"declaration": true,
+		"target": "ES5",
+		"module": "CommonJS"
+	},
+	"typeRoots": [
+		"node_modules/@types"
+	],
+	"types": [
+		"jquery"
+	],
+	"awesomeTypescriptLoaderOptions": {
+		"useCache": true
+	},
+	"exclude": [
+		"node_modules"
+	]
+}

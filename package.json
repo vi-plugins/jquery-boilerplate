@@ -1,0 +1,28 @@
+{
+	"name": "accordion",
+	"version": "0.0.1",
+	"description": "A TypeScript accordion plugin",
+	"main": "accordion.js",
+	"repository": "https://github.com/janrembold/accordion.git",
+	"author": "Jan Rembold <janrembold@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"clean": "rimraf dist",
+		"build": "webpack",
+		"build:uglify": "uglifyjs --compress --mangle -- ./dist/accordion.js",
+		"build:watch": "npm run clean && webpack --watch"
+	},
+	"devDependencies": {
+		"@types/jquery": "^2.0.39",
+		"rimraf": "^2.5.4",
+		"source-map-loader": "^0.1.6",
+		"ts-loader": "^2.0.0",
+		"typescript": "^2.1.5",
+		"uglify-js": "^2.7.5",
+		"webpack": "^1.14.0"
+	},
+	"dependencies": {
+		"JQueryPluginBase": "https://github.com/virtualidentityag/JQueryPluginBase",
+		"accordion": "https://github.com/janrembold/accordion"
+	}
+}
