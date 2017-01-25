@@ -1,6 +1,6 @@
 ///<reference types="jquery"/>
 
-import { JQueryPluginBase } from "JQueryPluginBase/index.js";
+import { JQueryPluginBase } from "jquery-plugin-base";
 import Demo from "./Demo";
 
 (function ($: JQueryStatic, window: any, document: any) {
