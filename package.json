@@ -12,10 +12,13 @@
 		"clean": "rimraf dist",
 		"build": "webpack",
 		"build:uglify": "uglifyjs --compress --mangle -- ./dist/accordion.js",
-		"build:watch": "npm run clean && webpack --watch"
+		"build:watch": "npm run clean && webpack --watch",
+		"pretest": "tsc test/*Test.ts --module commonjs",
+		"test": "mocha"
 	},
 	"devDependencies": {
 		"@types/jquery": "^2.0.39",
+		"mocha": "^3.2.0",
 		"rimraf": "^2.5.4",
 		"source-map-loader": "^0.1.6",
 		"ts-loader": "^2.0.0",
@@ -24,6 +27,7 @@
 		"webpack": "^1.14.0"
 	},
 	"dependencies": {
+		"@types/mocha": "^2.2.38",
 		"jquery-plugin-base": "^0.0.1",
 		"jquery-plugin-events": "^0.0.1"
 	}

@@ -12,4 +12,8 @@ export default class Demo {
 				$element.css('backgroundColor', 'green');
 			});
 	}
+
+	add(x: number, y: number): number {
+		return x + y;
+	}
 }
