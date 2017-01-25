@@ -22,7 +22,7 @@
 		"webpack": "^1.14.0"
 	},
 	"dependencies": {
-		"JQueryPluginBase": "https://github.com/virtualidentityag/JQueryPluginBase",
+		"jquery-plugin-base": "https://github.com/virtualidentityag/jquery-plugin-base",
 		"accordion": "https://github.com/janrembold/accordion"
 	}
 }
