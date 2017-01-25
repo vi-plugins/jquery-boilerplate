@@ -1,9 +1,11 @@
 {
-	"name": "accordion",
+	"name": "jquery-plugin-boilerplate",
 	"version": "0.0.1",
-	"description": "A TypeScript accordion plugin",
-	"main": "accordion.js",
-	"repository": "https://github.com/janrembold/accordion.git",
+	"description": "A TypeScript plugin boilerplate",
+	"main": "dist/boilerplate.min.js",
+	"module": "src/index.ts",
+	"typings": "src/index.d.ts",
+	"repository": "https://github.com/virtualidentityag/jquery-plugin-boilerplate.git",
 	"author": "Jan Rembold <janrembold@gmail.com>",
 	"license": "MIT",
 	"scripts": {
@@ -22,7 +24,7 @@
 		"webpack": "^1.14.0"
 	},
 	"dependencies": {
-		"jquery-plugin-base": "https://github.com/virtualidentityag/jquery-plugin-base",
-		"accordion": "https://github.com/janrembold/accordion"
+		"jquery-plugin-base": "^0.0.1",
+		"jquery-plugin-events": "^0.0.1"
 	}
 }

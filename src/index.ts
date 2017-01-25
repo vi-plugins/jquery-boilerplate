@@ -1,6 +1,7 @@
 ///<reference types="jquery"/>
 
 import { JQueryPluginBase } from "jquery-plugin-base";
+import EventHelper from "jquery-plugin-events";
 import Demo from "./Demo";
 
 (function ($: JQueryStatic, window: any, document: any) {
@@ -27,6 +28,16 @@ import Demo from "./Demo";
 		 */
 		constructor(element: Element, options: any) {
 			super(Plugin.NAME, element, Plugin.DEFAULTS, options);
+
+			// demo listeners for jquery-plugin-events.wrapEvents helper
+			this.$element.on('before.test', (e) => {
+				console.log('before test');
+				// e.preventDefault();
+			});
+
+			this.$element.on('after.test', () => {
+				console.log('after test');
+			});
 		}
 
 		/**
@@ -35,8 +46,13 @@ import Demo from "./Demo";
 		init(): void {
 			console.log('Plugin init() - foo = '+this.options.foo);
 
-			let demo = new Demo();
-			demo.test(this.$element);
+			EventHelper.wrapEvents('test', () => {
+
+				console.log('EventHelper fn')
+				let demo = new Demo();
+				demo.test(this.$element);
+
+			}, this.$element, this, []);
 		}
 	}
 
