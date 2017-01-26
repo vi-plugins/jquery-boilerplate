@@ -1,6 +1,9 @@
 /// <reference types="jquery" />
-export default class Demo {
+import { JQueryModuleBase } from "jquery-plugin-base";
+export default class Demo extends JQueryModuleBase {
     constructor();
+    init(): void;
+    destroy(): void;
     test($element: JQuery): void;
     add(x: number, y: number): number;
 }

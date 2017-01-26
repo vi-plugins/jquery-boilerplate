@@ -28,7 +28,7 @@
 	},
 	"dependencies": {
 		"@types/mocha": "^2.2.38",
-		"jquery-plugin-base": "^0.0.1",
+		"jquery-plugin-base": "^0.0.2",
 		"jquery-plugin-events": "^0.0.1"
 	}
 }

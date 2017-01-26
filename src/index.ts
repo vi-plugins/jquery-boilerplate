@@ -21,6 +21,11 @@ import Demo from "./Demo";
 		public static DEFAULTS: any = {};
 
 		/**
+		 * Demo variable for usage in destroy method
+		 */
+		public demo: Demo;
+
+		/**
 		 * The plugins constructor - always load base class (JQueryPluginBase) first
 		 *
 		 * @param element - The element the plugin is attached to
@@ -28,6 +33,13 @@ import Demo from "./Demo";
 		 */
 		constructor(element: Element, options: any) {
 			super(Plugin.NAME, element, Plugin.DEFAULTS, options);
+		}
+
+		/**
+		 * Place initialization logic here
+		 */
+		init(): void {
+			console.log('Plugin init() - foo = '+this.options.foo);
 
 			// demo listeners for jquery-plugin-events.wrapEvents helper
 			this.$element.on('before.test', (e) => {
@@ -38,21 +50,20 @@ import Demo from "./Demo";
 			this.$element.on('after.test', () => {
 				console.log('after test');
 			});
-		}
-
-		/**
-		 * Place initialization logic here
-		 */
-		init(): void {
-			console.log('Plugin init() - foo = '+this.options.foo);
 
 			EventHelper.wrapEvents('test', () => {
 
-				console.log('EventHelper fn')
-				let demo = new Demo();
-				demo.test(this.$element);
+				console.log('EventHelper fn');
+				this.demo = new Demo();
+				this.demo.test(this.$element);
 
 			}, this.$element, this, []);
+		}
+
+		destroy(): void {
+			console.log('plugin destroy');
+			this.demo.destroy();
+			super.destroy();
 		}
 	}
 

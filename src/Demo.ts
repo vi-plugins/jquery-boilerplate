@@ -1,6 +1,15 @@
-export default class Demo {
+import {JQueryModuleBase} from "jquery-plugin-base";
+
+export default class Demo extends JQueryModuleBase {
 	constructor() {
+		super();
 		console.log('Demo constructor()');
+	}
+
+	init(): void {
+	}
+
+	destroy(): void {
 	}
 
 	test($element: JQuery): void {
