@@ -42,27 +42,39 @@ import Demo from "./Demo";
 			console.log('Plugin init() - foo = '+this.options.foo);
 
 			// demo listeners for jquery-plugin-events.wrapEvents helper
-			this.$element.on('before.test', (e) => {
-				console.log('before test');
+			this.$element.on('before.test', (e, param) => {
+				console.log('before test = '+param);
 				// e.preventDefault();
 			});
 
-			this.$element.on('after.test', () => {
-				console.log('after test');
+			this.$element.on('after.test', (e, param) => {
+				console.log('after test = '+param);
 			});
 
-			EventHelper.wrapEvents('test', () => {
-
-				console.log('EventHelper fn');
-				this.demo = new Demo();
-				this.demo.test(this.$element);
-
-			}, this.$element, this, []);
+			// EventHelper wrapEvents demo
+			EventHelper.wrapEvents(
+				this.$element,
+				'test',
+				$.proxy(this.eventDemo, this, ['proxy param']),
+				['event param']
+			);
 		}
 
+		eventDemo(param: string) : void {
+			console.log('proxy demo with param = ' + param);
+			this.demo = new Demo();
+			this.demo.test(this.$element);
+		}
+
+		/**
+		 * local destroy overwrites JQueryPluginBase destroy method
+		 */
 		destroy(): void {
+			// custom destroy calls
 			console.log('plugin destroy');
 			this.demo.destroy();
+
+			// call destroy function of parent class as last call to reset element to initial state
 			super.destroy();
 		}
 	}

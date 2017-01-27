@@ -1,33 +1,33 @@
 {
-	"name": "jquery-plugin-boilerplate",
-	"version": "0.0.1",
-	"description": "A TypeScript plugin boilerplate",
-	"main": "dist/boilerplate.min.js",
-	"module": "src/index.ts",
-	"typings": "src/index.d.ts",
-	"repository": "https://github.com/virtualidentityag/jquery-plugin-boilerplate.git",
-	"author": "Jan Rembold <janrembold@gmail.com>",
-	"license": "MIT",
-	"scripts": {
-		"clean": "rimraf dist",
-		"build": "npm run clean && webpack",
-		"build:watch": "npm run clean && webpack --watch",
-		"pretest": "tsc test/*Test.ts --module commonjs",
-		"test": "mocha"
-	},
-	"devDependencies": {
-		"@types/jquery": "^2.0.39",
-		"mocha": "^3.2.0",
-		"rimraf": "^2.5.4",
-		"source-map-loader": "^0.1.6",
-		"ts-loader": "^2.0.0",
-		"typescript": "^2.1.5",
-		"uglify-js": "^2.7.5",
-		"webpack": "^1.14.0"
-	},
-	"dependencies": {
-		"@types/mocha": "^2.2.38",
-		"jquery-plugin-base": "^0.0.2",
-		"jquery-plugin-events": "^0.0.1"
-	}
+  "name": "jquery-plugin-boilerplate",
+  "version": "0.0.2",
+  "description": "A TypeScript plugin boilerplate",
+  "main": "dist/boilerplate.min.js",
+  "module": "src/index.ts",
+  "typings": "src/index.d.ts",
+  "repository": "https://github.com/virtualidentityag/jquery-plugin-boilerplate.git",
+  "author": "Jan Rembold <janrembold@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
+    "build:watch": "npm run clean && webpack --watch",
+    "pretest": "tsc test/*Test.ts --module commonjs",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.39",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.5.4",
+    "source-map-loader": "^0.1.6",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.5",
+    "uglify-js": "^2.7.5",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "@types/mocha": "^2.2.38",
+    "jquery-plugin-base": "^0.0.3",
+    "jquery-plugin-events": "^0.0.2"
+  }
 }

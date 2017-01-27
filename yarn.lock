@@ -717,13 +717,13 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-plugin-base@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/jquery-plugin-base/-/jquery-plugin-base-0.0.1.tgz#e568f5fd62c978a4a56dc7ff4f4d6f6749df77df"
+jquery-plugin-base@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/jquery-plugin-base/-/jquery-plugin-base-0.0.3.tgz#4913720673e725ed71557fe8023d6d56c0102afd"
 
-jquery-plugin-events@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/jquery-plugin-events/-/jquery-plugin-events-0.0.1.tgz#1293df25576ec9c4ec45165d1932e7b4ebad8d0f"
+jquery-plugin-events@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/jquery-plugin-events/-/jquery-plugin-events-0.0.2.tgz#05142f42f959e35782b0946c2512eab8f1a658d0"
 
 jsbn@~0.1.0:
   version "0.1.0"
@@ -1491,9 +1491,13 @@ window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
 
-wordwrap@0.0.2, wordwrap@~0.0.2:
+wordwrap@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
+
+wordwrap@~0.0.2:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wrappy@1:
   version "1.0.2"
