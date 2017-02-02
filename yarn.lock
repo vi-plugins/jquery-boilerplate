@@ -717,13 +717,13 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-jquery-plugin-base@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/jquery-plugin-base/-/jquery-plugin-base-0.0.3.tgz#4913720673e725ed71557fe8023d6d56c0102afd"
+"jquery-base@https://github.com/vi-plugins/jquery-base.git#0.1.0":
+  version "0.1.0"
+  resolved "https://github.com/vi-plugins/jquery-base.git#11fe91f2618891134968e854e2d4289da8b60d14"
 
-jquery-plugin-events@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/jquery-plugin-events/-/jquery-plugin-events-0.0.2.tgz#05142f42f959e35782b0946c2512eab8f1a658d0"
+"jquery-events@https://github.com/vi-plugins/jquery-events.git#0.1.0":
+  version "0.1.0"
+  resolved "https://github.com/vi-plugins/jquery-events.git#ee5bec593a9f1323d154e3f758493f449474778d"
 
 jsbn@~0.1.0:
   version "0.1.0"
