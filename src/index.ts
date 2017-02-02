@@ -1,7 +1,7 @@
 ///<reference types="jquery"/>
 
-import { JQueryPluginBase } from "jquery-plugin-base";
-import EventHelper from "jquery-plugin-events";
+import { JQueryPluginBase } from "jquery-base";
+import EventHelper from "jquery-events";
 import Demo from "./Demo";
 
 (function ($: JQueryStatic, window: any, document: any) {

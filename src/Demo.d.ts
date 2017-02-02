@@ -1,5 +1,5 @@
 /// <reference types="jquery" />
-import { JQueryModuleBase } from "jquery-plugin-base";
+import { JQueryModuleBase } from "jquery-base";
 export default class Demo extends JQueryModuleBase {
     constructor();
     init(): void;
