@@ -6,6 +6,12 @@ The prime reason of this boilerplate is to kickstart maintainable and testable j
 ## Getting started
 ### Duplicate boilerplate repository
 See https://help.github.com/articles/duplicating-a-repository/ for assistance
+After mirroring the plugin boilerplate follow these steps to prepare the plugin:
+
+- Rename output filename in `webpack.config.js` to desired plugin name
+- Rename static NAME in `src/index.ts` to desired plugin name
+- Change plugin filename in `example/index.html` to match new output filename
+- Do some magical modular plugin development and don't forget the tests!
 
 
 ## Development
@@ -27,7 +33,7 @@ Only minimum configuration is used at them moment (ts-loader, UglifyJS, source-m
 - `npm run build` cleans the dist folder and starts a single build with webpack
 - `npm run build:watch` same as build task but with activated watch - this is the preferred task for development
 - `npm run clean` cleans the dist folder
-- `npm test` executes the tests with mocha
+- `npm test` executes the tests with mocha and chai
 
 
 ## Conventions - Best practices
@@ -55,4 +61,4 @@ For testing we currently use plain simple mocha tests.
 ## ToDo
 - Add ESLint task
 - Create releases in GitHub for base, events and boilerplate repo as soon as the boilerplate is tested in real life scenarios
-- Add test cases with headless browser and demos for usage with "real" html elements
+- Add e2e test cases with headless browser and demos for usage with "real" html elements
