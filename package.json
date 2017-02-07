@@ -26,7 +26,8 @@
 		"ts-loader": "^2.0.0",
 		"typescript": "^2.1.5",
 		"uglify-js": "^2.7.5",
-		"webpack": "^1.14.0"
+		"webpack": "^2.2.1",
+		"webpack-node-externals": "^1.5.4"
 	},
 	"dependencies": {
 		"jquery-base": "https://github.com/vi-plugins/jquery-base.git",

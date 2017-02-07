@@ -12,7 +12,7 @@ module.exports = {
 
 	// Currently we need to add '.ts' to the resolve.extensions array.
 	resolve: {
-		extensions: ['', '.ts']
+		extensions: ['.ts']
 	},
 
 	// Source maps support ('inline-source-map' also works)
@@ -20,17 +20,21 @@ module.exports = {
 
 	// Add the loader for .ts files.
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.tsx?$/,
-				loader: 'ts-loader'
+				use: 'ts-loader'
 			}
 		]
 	},
 
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
-			minimize: true
+			minimize: true,
+			sourceMap: true,
+			compress: {
+				warnings: true
+			}
 		})
 	]
 };

@@ -3,7 +3,7 @@
 		"moduleResolution": "Node",
 		"noImplicitAny": true,
 		"removeComments": true,
-		"declaration": true,
+		"declaration": false,
 		"target": "ES5",
 		"module": "CommonJS"
 	},
@@ -13,10 +13,9 @@
 	"types": [
 		"jquery"
 	],
-	"awesomeTypescriptLoaderOptions": {
-		"useCache": true
-	},
 	"exclude": [
+		"dist",
+		"example",
 		"node_modules",
 		"test"
 	]
