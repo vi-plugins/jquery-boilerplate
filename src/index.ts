@@ -3,7 +3,7 @@
 import { BoilerplateOptions } from './interfaces/BoilerplateOptions';
 import { JQueryPluginBase } from "jquery-base";
 import EventHelper from "jquery-events";
-import Demo from "./Demo";
+import Demo from "./lib/Demo";
 
 
 (function ($: JQueryStatic, window: any, document: any) {

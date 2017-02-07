@@ -1,7 +1,7 @@
 ///<reference types="mocha"/>
 
 import { expect } from 'chai';
-import Demo from '../../src/Demo';
+import Demo from '../../src/lib/Demo';
 
 describe('Demo', () => {
 	let subject: Demo;
