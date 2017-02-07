@@ -1,6 +1,15 @@
+/** Plugin settings **/
+
+var jsOutputFile = 'dist/boilerplate.min.js';
+var cssOutputFile = 'dist/styles.css';
+
+
+
+/** Webpack configuration **/
+
 var webpack = require("webpack");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const extractCSS = new ExtractTextPlugin('dist/styles.css');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var extractCSS = new ExtractTextPlugin(cssOutputFile);
 
 module.exports = {
 	// application entry file
@@ -9,7 +18,7 @@ module.exports = {
 	// bundled application output file
 	output: {
 		path: __dirname,
-		filename: "/dist/boilerplate.min.js"
+		filename: jsOutputFile
 	},
 
 	// Currently we need to add '.ts' to the resolve.extensions array.
