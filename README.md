@@ -53,6 +53,11 @@ All modules should extend the class `JQueryModuleBase`. This class is also the b
 
 Modules should do only one thing. Always keep maintainability and testability in mind. Write tests for each module.
 
+
+## Interfaces
+Define interfaces for options and plugin definitions in sub-folder `src/interfaces`.
+
+
 ## Testing
 
 For testing we currently use plain simple mocha tests.
