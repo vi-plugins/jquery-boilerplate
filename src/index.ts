@@ -1,43 +1,30 @@
 ///<reference types="jquery"/>
 
+import { BoilerplateOptions } from './interfaces/BoilerplateOptions';
 import { JQueryPluginBase } from "jquery-base";
 import EventHelper from "jquery-events";
 import Demo from "./Demo";
+
 
 (function ($: JQueryStatic, window: any, document: any) {
 
 	class Plugin extends JQueryPluginBase {
 
-		/**
-		 * The plugins name
-		 * @type {string}
-		 */
+		/** The plugins name */
 		public static NAME: string = 'boilerplate';
 
-		/**
-		 * Set plugins default options
-		 * @type {{}}
-		 */
-		public static DEFAULTS: any = {};
+		/** Set plugins default options defined in given interface */
+		public static DEFAULTS: BoilerplateOptions = {};
 
-		/**
-		 * Demo variable for usage in destroy method
-		 */
+		/** Demo variable for usage in destroy method */
 		public demo: Demo;
 
-		/**
-		 * The plugins constructor - always load base class (JQueryPluginBase) first
-		 *
-		 * @param element - The element the plugin is attached to
-		 * @param options - The plugins custom options, default options are extended by these options
-		 */
+		/** The plugins constructor - always load base class (JQueryPluginBase) first */
 		constructor(element: Element, options: any) {
 			super(Plugin.NAME, element, Plugin.DEFAULTS, options);
 		}
 
-		/**
-		 * Place initialization logic here
-		 */
+		/** Place initialization logic here */
 		init(): void {
 			console.log('Plugin init() - foo = '+this.options.foo);
 
@@ -60,15 +47,14 @@ import Demo from "./Demo";
 			);
 		}
 
+		/** demo function */
 		eventDemo(param: string) : void {
 			console.log('proxy demo with param = ' + param);
 			this.demo = new Demo();
 			this.demo.test(this.$element);
 		}
 
-		/**
-		 * local destroy overwrites JQueryPluginBase destroy method
-		 */
+		/** local destroy overwrites JQueryPluginBase destroy method */
 		destroy(): void {
 			// custom destroy calls
 			console.log('plugin destroy');
@@ -79,21 +65,14 @@ import Demo from "./Demo";
 		}
 	}
 
-	/**
-	 * Attach plugin to jQuery fn namespace
-	 *
-	 * @param options
-	 * @returns {any|JQuery}
-	 */
+	/** Attach plugin to jQuery fn namespace */
 	$.fn[Plugin.NAME] = function (options: any) {
-
 		return this.each(function () {
 			let $this = $(this);
 			if (!$this.data(Plugin.NAME)) {
 				$this.data(Plugin.NAME, new Plugin(this, options));
 			}
 		});
-
 	};
 
 })(jQuery, window, document);
