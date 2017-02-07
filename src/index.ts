@@ -5,6 +5,7 @@ import { JQueryPluginBase } from "jquery-base";
 import EventHelper from "jquery-events";
 import Demo from "./lib/Demo";
 
+import './scss/demo.scss';
 
 (function ($: JQueryStatic, window: any, document: any) {
 

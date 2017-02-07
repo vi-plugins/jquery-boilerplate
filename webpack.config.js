@@ -1,4 +1,6 @@
 var webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractCSS = new ExtractTextPlugin('dist/styles.css');
 
 module.exports = {
 	// application entry file
@@ -24,6 +26,17 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				use: 'ts-loader'
+			},
+			{
+				test: /\.scss$/,
+				use: extractCSS.extract([
+					{
+						loader: 'css-loader'
+					},
+					{
+						loader: 'sass-loader'
+					}
+				])
 			}
 		]
 	},
@@ -35,6 +48,7 @@ module.exports = {
 			compress: {
 				warnings: true
 			}
-		})
+		}),
+		extractCSS
 	]
 };
