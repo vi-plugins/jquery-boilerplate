@@ -17,6 +17,7 @@
 		"test:unit": "tsc --module commonjs ./test/unit/*.ts && mocha ./test/unit/*.js"
 	},
 	"devDependencies": {
+		"@types/chai": "^3.5.2",
 		"@types/jquery": "^2.0.39",
 		"@types/mocha": "^2.2.38",
 		"chai": "^3.5.0",

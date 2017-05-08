@@ -1,4 +1,5 @@
 ///<reference types="mocha"/>
+///<reference types="chai"/>
 
 import { expect } from 'chai';
 import Demo from '../../src/lib/Demo';
