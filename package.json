@@ -21,6 +21,7 @@
 		"@types/chai": "^3.5.2",
 		"@types/jquery": "^2.0.39",
 		"@types/mocha": "^2.2.38",
+		"babel-preset-es2015": "^6.24.1",
 		"chai": "^3.5.0",
 		"css-loader": "^0.26.1",
 		"extract-text-webpack-plugin": "2.0.0-rc.3",
@@ -30,6 +31,7 @@
 		"karma-chrome-launcher": "^2.1.1",
 		"karma-jasmine": "^1.1.0",
 		"karma-jasmine-jquery": "^0.1.1",
+		"karma-jquery": "^0.2.0",
 		"mocha": "^3.2.0",
 		"node-sass": "^4.5.0",
 		"rimraf": "^2.5.4",
@@ -44,7 +46,6 @@
 	"dependencies": {
 		"jquery": "^3.2.1",
 		"jquery-base": "https://github.com/vi-plugins/jquery-base.git",
-		"jquery-events": "https://github.com/vi-plugins/jquery-events.git",
-		"karma-jquery": "^0.2.0"
+		"jquery-events": "https://github.com/vi-plugins/jquery-events.git"
 	}
 }
