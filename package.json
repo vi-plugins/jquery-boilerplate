@@ -1,6 +1,6 @@
 {
 	"name": "jquery-boilerplate",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "A TypeScript plugin boilerplate",
 	"main": "dist/boilerplate.min.js",
 	"module": "src/index.ts",
@@ -17,25 +17,25 @@
 		"test:unit": "tsc --module commonjs ./test/unit/*.ts && mocha ./test/unit/*.js"
 	},
 	"devDependencies": {
-		"@types/chai": "^3.5.2",
-		"@types/jquery": "^2.0.39",
-		"@types/mocha": "^2.2.38",
-		"chai": "^3.5.0",
-		"css-loader": "^0.26.1",
-		"extract-text-webpack-plugin": "2.0.0-rc.3",
-		"mocha": "^3.2.0",
-		"node-sass": "^4.5.0",
-		"rimraf": "^2.5.4",
-		"sass-loader": "^5.0.0",
-		"source-map-loader": "^0.1.6",
-		"ts-loader": "^2.0.0",
-		"typescript": "^2.1.5",
-		"uglify-js": "^2.7.5",
-		"webpack": "^2.2.1",
-		"webpack-node-externals": "^1.5.4"
+		"@types/chai": "4.0.6",
+		"@types/jquery": "3.2.16",
+		"@types/mocha": "2.2.44",
+		"chai": "4.1.2",
+		"css-loader": "0.28.7",
+		"extract-text-webpack-plugin": "3.0.2",
+		"mocha": "4.0.1",
+		"node-sass": "4.7.2",
+		"rimraf": "2.6.2",
+		"sass-loader": "6.0.6",
+		"source-map-loader": "0.2.3",
+		"ts-loader": "3.2.0",
+		"typescript": "2.6.2",
+		"uglify-js": "3.2.0",
+		"webpack": "3.9.1",
+		"webpack-node-externals": "1.6.0"
 	},
 	"dependencies": {
-		"jquery-base": "https://github.com/vi-plugins/jquery-base.git",
-		"jquery-events": "https://github.com/vi-plugins/jquery-events.git"
+		"jquery-base": "https://github.com/vi-plugins/jquery-base.git#1.0.0",
+		"jquery-events": "https://github.com/vi-plugins/jquery-events.git#1.0.0"
 	}
 }
